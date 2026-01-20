@@ -67,14 +67,11 @@
       min-width:220px;
     }
 
-    .mark{
-      width:34px;
-      height:34px;
-      border-radius: 10px;
-      background: radial-gradient(80% 80% at 30% 30%, rgba(96,165,250,.9), rgba(37,99,235,.65) 55%, rgba(2,6,23,.2) 100%),
-                  linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,0));
-      border: 1px solid rgba(96,165,250,.35);
-      box-shadow: 0 10px 30px rgba(37,99,235,.25);
+    .mark {
+      width: 34px;
+      height: 34px;
+      display: block;
+      object-fit: contain;
     }
 
     .wordmark{
@@ -472,24 +469,28 @@
 
 <body>
   <header id="top">
-    <div class="wrap">
-      <div class="header-inner">
-        <a class="brand" href="#top" aria-label="FutureCount Home">
-          <div class="mark" aria-hidden="true"></div>
-          <div class="wordmark">FutureCount <small>Advisory-led enablement</small></div>
-        </a>
+  <div class="wrap">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="FutureCount Home">
+        <img
+          src="with background.png"
+          alt="FutureCount logo"
+          class="mark"
+        />
+        <div class="wordmark">
+          FutureCount
+          <small>Advisory-led enablement</small>
+        </div>
+      </a>
 
-        <nav aria-label="Primary">
-          <a href="#how">How It Works</a>
-          <a href="#services">Services</a>
-          
-          
-          <a class="nav-cta" href="contact.html">Contact</a>
-        </nav>
-      </div>
+      <nav aria-label="Primary">
+        <a href="#how">How It Works</a>
+        <a href="#services">Services</a>
+        <a class="nav-cta" href="contact.html">Contact</a>
+      </nav>
     </div>
-  </header>
-
+  </div>
+</header>
   <main>
     <section class="hero" aria-label="Hero">
       <div class="hero-grid" aria-hidden="true"></div>
