@@ -1,220 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Contact | FutureCount LLC</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | FutureCount LLC</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  <style>
+    :root{
+      --bg:#0b1020;
+      --panel:#0f172a;
+      --panel2:#020617;
+      --line:#1e293b;
+      --text:#e5e7eb;
+      --muted:#cbd5e1;
+      --muted2:#e0e7ff;
+      --accent:#60a5fa;
+      --accent2:#2563eb;
+      --ink:#f8fafc;
+      --shadow: 0 14px 50px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
 
-  html, body {
-    width: 100%;
-    height: 100%;
-    font-family: 'Inter', sans-serif;
-    background: #2563EB;
-    color: #E5E7EB;
-  }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    html,body{height:100%;}
 
-  .container {
-    max-width: 1180px;
-    margin: auto;
-    padding: 72px 24px;
-  }
+    body{
+      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
 
-  header {
-    background: #0F172A;
-    border-bottom: 1px solid #1E293B;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
+    a{color:inherit;text-decoration:none;}
+    .wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
 
-  .header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 24px;
-    max-width: 1180px;
-    margin: auto;
-  }
+    /* Header — EXACT MATCH TO INDEX */
 
-  .logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    color: #F8FAFC;
-    border: 1px solid #2563EB;
-    padding: 8px 14px;
-  }
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background: rgba(15,23,42,.82);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(30,41,59,.7);
+      transition: box-shadow .25s ease, background .25s ease;
+    }
 
-  nav a {
-    font-size: 14px;
-    font-weight: 500;
-    color: #CBD5E1;
-    margin-left: 28px;
-    text-decoration: none;
-  }
+    header.scrolled{
+      box-shadow: var(--shadow);
+      background: rgba(15,23,42,.92);
+    }
 
-  nav a:hover { color: #60A5FA; }
+    .header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      height:72px;
+    }
 
-  /* CONTACT CONTENT */
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:220px;
+    }
 
-  .contact-section {
-    background: #020617;
-    border-top: 1px solid #1E293B;
-    border-bottom: 1px solid #1E293B;
-    padding: 96px 0;
-  }
+    .mark{
+      width:34px;
+      height:34px;
+      display:block;
+      object-fit:contain;
+    }
 
-  .contact-section h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 40px;
-    margin-bottom: 20px;
-    color: #F8FAFC;
-  }
+    .wordmark{
+      font-family:'Playfair Display',serif;
+      font-weight:700;
+      letter-spacing:.02em;
+      color: var(--ink);
+      font-size:18px;
+      line-height:1.05;
+    }
 
-  .contact-section p {
-    font-size: 18px;
-    line-height: 1.7;
-    color: #CBD5E1;
-    max-width: 760px;
-    margin-bottom: 28px;
-  }
+    .wordmark small{
+      display:block;
+      font-family:'Inter',sans-serif;
+      font-weight:500;
+      opacity:.75;
+      letter-spacing:.01em;
+      font-size:12px;
+      margin-top:2px;
+    }
 
-  .contact-cta {
-    display: inline-block;
-    font-weight: 600;
-    font-size: 16px;
-    padding: 16px 36px;
-    border-radius: 2px;
-    border: 1px solid #60A5FA;
-    background: transparent;
-    color: #F8FAFC;
-    text-decoration: none;
-  }
+    nav{
+      display:flex;
+      align-items:center;
+      gap:20px;
+    }
 
-  .contact-cta:hover {
-    background: rgba(96,165,250,0.08);
-  }
+    nav a{
+      font-size:13px;
+      font-weight:600;
+      color: var(--muted);
+      padding:10px 10px;
+      border-radius:10px;
+      white-space:nowrap;
+    }
 
-  .contact-note {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #94A3B8;
-  }
+    nav a:hover{
+      color: var(--ink);
+      background: rgba(96,165,250,.08);
+    }
 
-  /* FOOTER */
+    .nav-cta{
+      margin-left:6px;
+      padding:10px 14px;
+      border:1px solid rgba(96,165,250,.55);
+      background: rgba(96,165,250,.10);
+      color: var(--ink);
+    }
 
-  footer {
-    background: #2563EB;
-    border-top: 1px solid #1E40AF;
-    padding: 64px 24px;
-  }
+    .nav-cta:hover{
+      background: rgba(96,165,250,.18);
+    }
 
-  .footer-inner {
-    max-width: 1180px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
+    /* Contact content */
 
-  .footer-brand {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: #F8FAFC;
-    margin-bottom: 12px;
-  }
+    .contact{
+      padding: 96px 0;
+      background: rgba(2,6,23,.55);
+      border-top:1px solid rgba(30,41,59,.9);
+      border-bottom:1px solid rgba(30,41,59,.9);
+    }
 
-  .footer-note {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #E0E7FF;
-    max-width: 420px;
-  }
+    .contact h1{
+      font-family:'Playfair Display',serif;
+      font-size:40px;
+      color: var(--ink);
+      margin-bottom:20px;
+    }
 
-  .footer-links a {
-    display: block;
-    font-size: 14px;
-    color: #E0E7FF;
-    margin-bottom: 10px;
-    text-decoration: none;
-  }
+    .contact p{
+      font-size:18px;
+      line-height:1.7;
+      color: var(--muted);
+      max-width:760px;
+      margin-bottom:28px;
+    }
 
-  .footer-links a:hover { color: #FFFFFF; }
+    .contact-cta{
+      display:inline-block;
+      font-weight:700;
+      font-size:15px;
+      padding:14px 32px;
+      border-radius:14px;
+      border:1px solid rgba(96,165,250,.55);
+      background: rgba(2,6,23,.28);
+      color: var(--ink);
+    }
 
-  .footer-bottom {
-    margin-top: 5px;
-    padding-top: 32px;
-    border-top: 1px solid #1E40AF;
-    font-size: 13px;
-    color: #DBEAFE;
-    text-align: right;
-  }
-</style>
+    .contact-cta:hover{
+      background: rgba(96,165,250,.14);
+    }
+
+    .contact-note{
+      margin-top:18px;
+      font-size:14px;
+      color: rgba(203,213,225,.75);
+    }
+
+    /* Footer */
+
+    footer{
+      padding:56px 0;
+      background: rgba(2,6,23,.85);
+      border-top:1px solid rgba(30,41,59,.9);
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:24px;
+    }
+
+    .footer-grid b{
+      display:block;
+      color: var(--ink);
+      margin-bottom:10px;
+    }
+
+    .footer-grid a{
+      display:block;
+      color: rgba(224,231,255,.82);
+      font-size:14px;
+      margin:8px 0;
+    }
+
+    .footer-grid a:hover{color:var(--ink);}
+
+    .fine{
+      margin-top:24px;
+      padding-top:18px;
+      border-top:1px solid rgba(30,41,59,.9);
+      color: rgba(203,213,225,.72);
+      font-size:13px;
+      text-align:right;
+    }
+
+    @media (max-width: 980px){
+      nav{display:none;}
+      .footer-grid{grid-template-columns:1fr;}
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <div class="header-inner">
-    <div class="logo">FutureCount LLC</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="#">How It Works</a>
-      <a href="#">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+<header id="top">
+  <div class="wrap">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="FutureCount Home">
+        <img src="with background.png" alt="FutureCount logo" class="mark" />
+        <div class="wordmark">
+          FutureCount
+          <small>Advisory-led enablement</small>
+        </div>
+      </a>
+
+      <nav aria-label="Primary">
+        <a href="index.html#how">How It Works</a>
+        <a href="index.html#services">Services</a>
+        <a class="nav-cta" href="contact.html">Contact</a>
+      </nav>
+    </div>
   </div>
 </header>
 
-<section class="contact-section">
-  <div class="container">
-    <h1>Contact</h1>
-    <p>
-      FutureCount works with a limited number of accounting and advisory firms.
-      If you are evaluating how to extend your firm’s capabilities around modern finance
-      and accounting systems, an introductory conversation is the appropriate next step.
-    </p>
+<main>
+  <section class="contact">
+    <div class="wrap">
+      <h1>Contact</h1>
+      <p>
+        FutureCount works with a limited number of accounting and advisory firms.
+        If you are evaluating how to extend your firm’s capabilities around modern finance
+        and accounting systems, an introductory conversation is the appropriate next step.
+      </p>
 
-    <a href="#" class="contact-cta">
-      Schedule an introductory conversation
-    </a>
+      <a href="#" class="contact-cta">
+        Schedule an introductory conversation
+      </a>
 
-    <div class="contact-note">
-      Conversations are exploratory and confidential.
-      No preparation or materials are required.
+      <div class="contact-note">
+        Conversations are exploratory and confidential.
+        No preparation or materials are required.
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</main>
 
 <footer>
-  <div class="footer-inner">
-    <div>
-      <div class="footer-brand">FutureCount LLC</div>
-      <p class="footer-note">
-        Partnering with accounting and advisory firms to implement and operate modern finance systems and advisory practices.
-      </p>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <b>FutureCount LLC</b>
+        <div style="color: rgba(224,231,255,.82); line-height:1.7; max-width:68ch;">
+          Partnering with accounting and advisory firms to implement and operate modern finance systems and advisory practices.
+        </div>
+      </div>
+      <div>
+        <b>Explore</b>
+        <a href="index.html#how">How It Works</a>
+        <a href="index.html#services">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
-
-    <div class="footer-links">
-      <a href="#">How It Works</a>
-      <a href="#">About</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    © 2026 FutureCount LLC. All rights reserved.
+    <div class="fine">© 2026 FutureCount LLC. All rights reserved.</div>
   </div>
 </footer>
+
+<script>
+  (function(){
+    const header = document.querySelector('header');
+    function onScroll(){
+      if(window.scrollY > 8){header.classList.add('scrolled');}
+      else{header.classList.remove('scrolled');}
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+  })();
+</script>
 
 </body>
 </html>
