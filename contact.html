@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SPFGC7K7TL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SPFGC7K7TL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SPFGC7K7TL');
+  </script>
 
-  gtag('config', 'G-SPFGC7K7TL');
-</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | FutureCount LLC</title>
@@ -137,14 +137,13 @@
 
     /* Contact content */
     .contact{
-  padding: 96px 0;
-  background:
-    radial-gradient(700px 500px at 20% 30%, rgba(96,165,250,.28), rgba(96,165,250,0) 60%),
-    radial-gradient(650px 520px at 70% 35%, rgba(37,99,235,.22), rgba(37,99,235,0) 62%),
-    linear-gradient(120deg, rgba(2,6,23,1), rgba(15,23,42,1));
-  border-top:1px solid rgba(30,41,59,.9);
-  border-bottom:1px solid rgba(30,41,59,.9);
-}
+      padding: 96px 0;
+      background:
+        radial-gradient(700px 500px at 20% 30%, rgba(96,165,250,.28), rgba(96,165,250,0) 60%),
+        radial-gradient(650px 520px at 70% 35%, rgba(37,99,235,.22), rgba(37,99,235,0) 62%),
+        linear-gradient(120deg, rgba(2,6,23,1), rgba(15,23,42,1));
+      border-top:1px solid rgba(30,41,59,.9);
+      border-bottom:1px solid rgba(30,41,59,.9);
     }
 
     .contact h1{
@@ -171,6 +170,7 @@
       border:1px solid rgba(96,165,250,.55);
       background: rgba(2,6,23,.28);
       color: var(--ink);
+      cursor:pointer;
     }
 
     .contact-cta:hover{
@@ -183,7 +183,60 @@
       color: rgba(203,213,225,.75);
     }
 
-    /* Footer */
+    /* Modal */
+    .modal{
+      position:fixed;
+      inset:0;
+      background:rgba(2,6,23,.85);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      z-index:100;
+    }
+
+    .modal.active{
+      display:flex;
+    }
+
+    .modal-card{
+      width:min(900px,92vw);
+      height:80vh;
+      background:var(--panel);
+      border-radius:18px;
+      box-shadow:var(--shadow);
+      display:flex;
+      flex-direction:column;
+      overflow:hidden;
+    }
+
+    .modal-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:14px 18px;
+      border-bottom:1px solid rgba(30,41,59,.9);
+    }
+
+    .modal-header b{
+      font-size:14px;
+      color:var(--ink);
+    }
+
+    .modal-close{
+      font-size:14px;
+      cursor:pointer;
+      opacity:.8;
+    }
+
+    .modal-close:hover{opacity:1;}
+
+    .modal iframe{
+      flex:1;
+      width:100%;
+      border:0;
+    }
+
+    /* Footer (canonical, matches contact.html) */
     footer{
       padding:56px 0;
       background: rgba(2,6,23,.85);
@@ -256,18 +309,17 @@
   </header>
 
   <main>
-    <section class="contact">
+    <section class="contact" id="contact-hero">
       <div class="wrap">
         <h1>Contact</h1>
         <p>
           FutureCount works with a limited number of accounting and advisory firms.
-          If you are evaluating how to extend your firm’s capabilities around modern finance
-          and accounting systems, an introductory conversation is the appropriate next step.
+          An introductory conversation is the appropriate next step.
         </p>
 
-        <a href="#" class="contact-cta">
+        <button class="contact-cta" id="openScheduler">
           Schedule an introductory conversation
-        </a>
+        </button>
 
         <div class="contact-note">
           Conversations are exploratory and confidential.
@@ -277,6 +329,22 @@
     </section>
   </main>
 
+  <!-- Modal -->
+  <div class="modal" id="schedulerModal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-label="Schedule a conversation">
+      <div class="modal-header">
+        <b>Schedule a conversation</b>
+        <span class="modal-close" id="closeScheduler" role="button" tabindex="0">Close</span>
+      </div>
+      <iframe
+        src="https://app.simplymeet.me/futurecountllc?is_widget=1&view="
+        scrolling="yes"
+        title="SimplyMeet.me Scheduler">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Footer (exactly matches contact.html) -->
   <footer>
     <div class="wrap">
       <div class="footer-grid">
@@ -296,6 +364,52 @@
       <div class="fine">© 2026 FutureCount LLC. All rights reserved.</div>
     </div>
   </footer>
+
+  <script>
+(function(){
+  const modal = document.getElementById('schedulerModal');
+  const hero = document.getElementById('contact-hero');
+
+  function openModal(e){
+    if(e) e.preventDefault();
+    if(!modal) return;
+    modal.classList.add('active');
+    // Fallback in case CSS fails to load for any reason
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal(e){
+    if(e) e.preventDefault();
+    if(!modal) return;
+    modal.classList.remove('active');
+    modal.style.display = '';
+    document.body.style.overflow = '';
+    if(hero && hero.scrollIntoView){
+      hero.scrollIntoView({behavior:'smooth'});
+    }
+  }
+
+  // Event delegation: survives markup tweaks and avoids null refs.
+  document.addEventListener('click', function(e){
+    const openTarget = e.target.closest('#openScheduler');
+    if(openTarget){ openModal(e); return; }
+
+    const closeTarget = e.target.closest('#closeScheduler');
+    if(closeTarget){ closeModal(e); return; }
+
+    // Click backdrop to close
+    if(modal && e.target === modal){ closeModal(e); }
+  });
+
+  // ESC to close
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && modal && modal.classList.contains('active')){
+      closeModal(e);
+    }
+  });
+})();
+</script>
 
   <script>
     (function(){
