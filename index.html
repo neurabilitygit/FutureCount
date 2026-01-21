@@ -49,7 +49,10 @@
       transition: box-shadow .25s ease, background .25s ease;
     }
 
-    header.scrolled{box-shadow: var(--shadow); background: rgba(15,23,42,.92);}
+    header.scrolled{
+      box-shadow: var(--shadow);
+      background: rgba(15,23,42,.92);
+    }
 
     .header-inner{
       display:flex;
@@ -62,20 +65,17 @@
       display:flex;
       align-items:center;
       gap:12px;
-      min-width:220px;
     }
 
     .mark{
       width:34px;
       height:34px;
-      display:block;
       object-fit:contain;
     }
 
     .wordmark{
       font-family:'Playfair Display',serif;
       font-weight:700;
-      letter-spacing:.02em;
       color: var(--ink);
       font-size:18px;
       line-height:1.05;
@@ -83,17 +83,13 @@
 
     .wordmark small{
       display:block;
-      font-family:'Inter',sans-serif;
-      font-weight:500;
-      opacity:.75;
-      letter-spacing:.01em;
       font-size:12px;
+      opacity:.75;
       margin-top:2px;
     }
 
     nav{
       display:flex;
-      align-items:center;
       gap:20px;
     }
 
@@ -101,32 +97,30 @@
       font-size:13px;
       font-weight:600;
       color: var(--muted);
-      padding:10px 10px;
-      border-radius: 10px;
-      transition: color .2s ease, background .2s ease;
-      white-space:nowrap;
+      padding:10px;
+      border-radius:10px;
     }
 
-    nav a:hover{color: var(--ink); background: rgba(96,165,250,.08);}
+    nav a:hover{
+      color: var(--ink);
+      background: rgba(96,165,250,.08);
+    }
 
     .nav-cta{
-      margin-left:6px;
-      padding:10px 14px;
       border:1px solid rgba(96,165,250,.55);
       background: rgba(96,165,250,.10);
       color: var(--ink);
+      padding:10px 14px;
     }
 
-    .nav-cta:hover{background: rgba(96,165,250,.18);}
-
-    /* Hero with animated background */
+    /* Hero */
     .hero{
       position:relative;
-      min-height: 92vh;
+      min-height:92vh;
       display:flex;
       align-items:center;
-      border-bottom:1px solid rgba(30,41,59,.9);
       overflow:hidden;
+      border-bottom:1px solid rgba(30,41,59,.9);
     }
 
     .hero::before{
@@ -134,485 +128,219 @@
       position:absolute;
       inset:-40%;
       background:
-        radial-gradient(700px 500px at 20% 30%, rgba(96,165,250,.38), rgba(96,165,250,0) 60%),
-        radial-gradient(650px 520px at 70% 35%, rgba(37,99,235,.30), rgba(37,99,235,0) 62%),
-        radial-gradient(520px 520px at 55% 75%, rgba(124,58,237,.18), rgba(124,58,237,0) 62%),
-        linear-gradient(120deg, rgba(2,6,23,1), rgba(15,23,42,1));
-      filter: saturate(115%);
-      transform: translate3d(0,0,0);
+        radial-gradient(700px 500px at 20% 30%, rgba(96,165,250,.38), transparent 60%),
+        radial-gradient(650px 520px at 70% 35%, rgba(37,99,235,.30), transparent 62%),
+        linear-gradient(120deg, #020617, #0f172a);
       animation: drift 14s ease-in-out infinite;
     }
 
-    .hero::after{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        linear-gradient(180deg, rgba(2,6,23,.0), rgba(2,6,23,.45) 70%, rgba(2,6,23,.85) 100%);
-      pointer-events:none;
-    }
-
     @keyframes drift{
-      0%{transform: translate3d(-1.5%, -1.2%, 0) scale(1.02);}
-      50%{transform: translate3d(1.5%, 1.2%, 0) scale(1.06);}
-      100%{transform: translate3d(-1.5%, -1.2%, 0) scale(1.02);}
-    }
-
-    .hero-grid{
-      position:absolute;
-      inset:0;
-      background-image:
-        linear-gradient(to right, rgba(148,163,184,.08) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(148,163,184,.08) 1px, transparent 1px);
-      background-size: 72px 72px;
-      mask-image: radial-gradient(60% 50% at 45% 35%, rgba(0,0,0,.9), rgba(0,0,0,0));
-      opacity:.55;
-      pointer-events:none;
+      0%{transform:translate(-1.5%,-1.2%) scale(1.02);}
+      50%{transform:translate(1.5%,1.2%) scale(1.06);}
+      100%{transform:translate(-1.5%,-1.2%) scale(1.02);}
     }
 
     .hero-inner{
       position:relative;
-      width:100%;
-      padding: 92px 0 64px;
       z-index:2;
+      width:100%;
+      padding:92px 0 64px;
     }
 
     .hero-layout{
       display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 44px;
+      grid-template-columns:1.1fr .9fr;
+      gap:44px;
       align-items:center;
     }
 
     h1{
       font-family:'Playfair Display',serif;
       font-size:54px;
-      line-height:1.06;
-      color: var(--ink);
+      color:var(--ink);
       margin-bottom:14px;
-      letter-spacing:.01em;
     }
 
     .subtitle{
       font-size:18px;
-      color: var(--muted2);
-      line-height:1.6;
+      color:var(--muted2);
       margin-bottom:18px;
-      max-width: 54ch;
     }
 
     .lead{
       font-size:18px;
       line-height:1.7;
-      color: rgba(224,231,255,.92);
-      max-width: 62ch;
+      color:rgba(224,231,255,.92);
       margin-bottom:26px;
     }
 
-    .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+    .cta-row{display:flex;gap:14px;}
 
     .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding: 13px 18px;
-      border-radius: 14px;
+      padding:13px 18px;
+      border-radius:14px;
+      border:1px solid rgba(224,231,255,.38);
+      background:rgba(2,6,23,.28);
       font-weight:700;
       font-size:14px;
-      border:1px solid rgba(224,231,255,.38);
-      background: rgba(2,6,23,.28);
-      color: var(--ink);
-      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+      color:var(--ink);
     }
-
-    .btn:hover{transform: translateY(-1px); background: rgba(96,165,250,.14); border-color: rgba(96,165,250,.55);}
 
     .btn.primary{
-      background: rgba(37,99,235,.32);
-      border-color: rgba(96,165,250,.62);
+      background:rgba(37,99,235,.32);
+      border-color:rgba(96,165,250,.62);
     }
 
-    .btn.primary:hover{background: rgba(37,99,235,.42);}
-
-    .micro{
-      font-size:12px;
-      color: rgba(203,213,225,.88);
-      margin-top: 14px;
-    }
-
+    /* Hero Card */
     .hero-card{
       border-radius: var(--radius);
-      border:1px solid rgba(148,163,184,.22);
+      border: 2px solid rgba(255,255,255,.35);
       background: rgba(2,6,23,.35);
       box-shadow: var(--shadow);
-      overflow:hidden;
+      overflow: hidden;
     }
 
     .hero-card .top{
-      padding: 18px 18px 14px;
-      border-bottom:1px solid rgba(30,41,59,.8);
+      padding:18px;
+      border-bottom:1px solid rgba(255,255,255,.25);
       display:flex;
+      justify-content:center;
       align-items:center;
-      justify-content:space-between;
-      gap:10px;
+      position:relative;
     }
 
-    .hero-card .top strong{font-size:13px;color: var(--ink);letter-spacing:.01em;}
+    .hero-card .top strong{
+      font-size:13px;
+      letter-spacing:.01em;
+      text-align:center;
+      color:var(--ink);
+    }
 
-    .pill{
+    .hero-card .top .pill{
+      position:absolute;
+      right:18px;
       font-size:12px;
-      font-weight:700;
-      color: rgba(224,231,255,.95);
-      border:1px solid rgba(96,165,250,.35);
-      background: rgba(96,165,250,.10);
       padding:6px 10px;
-      border-radius: 999px;
-      white-space:nowrap;
+      border-radius:999px;
+      border:1px solid rgba(96,165,250,.35);
+      background:rgba(96,165,250,.10);
+      color:rgba(224,231,255,.95);
     }
 
-    .hero-card .body{padding: 18px;}
+    .hero-card .body{padding:18px;}
 
     .stat{
       display:grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
+      gap:14px;
     }
 
     .stat-item{
       padding:14px;
-      border-radius: 14px;
+      border-radius:14px;
+      background:rgba(15,23,42,.45);
       border:1px solid rgba(148,163,184,.18);
-      background: rgba(15,23,42,.45);
     }
 
-    .stat-item b{display:block;color: var(--ink);font-size:13px;margin-bottom:6px;}
-    .stat-item span{display:block;color: rgba(203,213,225,.92);font-size:13px;line-height:1.55;}
-
-    /* Sections */
-    section{padding: 84px 0;}
-
-    .section-title{
-      font-family:'Playfair Display',serif;
-      font-size:34px;
-      color: var(--ink);
-      margin-bottom: 14px;
-    }
-
-    .section-sub{
-      color: rgba(203,213,225,.92);
-      font-size:16px;
-      line-height:1.7;
-      max-width: 72ch;
-      margin-bottom: 34px;
-    }
-
-    .grid-3{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .card{
-      border-radius: var(--radius);
-      border:1px solid rgba(148,163,184,.18);
-      background: rgba(15,23,42,.55);
-      padding: 18px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.22);
-    }
-
-    .card h3{color: var(--ink);font-size:16px;margin-bottom:8px;}
-    .card p{color: rgba(203,213,225,.92);font-size:14px;line-height:1.65;}
-
-    .steps{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .step{
-      border-radius: var(--radius);
-      border:1px solid rgba(148,163,184,.18);
-      background: rgba(2,6,23,.45);
-      padding: 18px;
-    }
-
-    .step .num{
-      width:28px;height:28px;border-radius: 10px;
-      display:grid;place-items:center;
-      border:1px solid rgba(96,165,250,.4);
-      background: rgba(96,165,250,.12);
-      color: var(--ink);
-      font-weight:800;
-      margin-bottom:10px;
+    .stat-item b{
+      display:block;
+      margin-bottom:6px;
+      color:var(--ink);
       font-size:13px;
     }
 
-    .step h4{color: var(--ink);font-size:15px;margin-bottom:7px;}
-    .step p{color: rgba(203,213,225,.92);font-size:14px;line-height:1.65;}
-
-    /* Footer */
-    footer{
-      padding: 56px 0;
-      background: rgba(2,6,23,.85);
-      border-top: 1px solid rgba(30,41,59,.9);
+    .stat-item span{
+      font-size:13px;
+      line-height:1.55;
+      color:rgba(203,213,225,.92);
     }
 
-    .footer-grid{display:grid;grid-template-columns: 1.2fr .8fr;gap: 24px;align-items:start;}
+    section{padding:84px 0;}
 
-    .footer-grid b{display:block;color: var(--ink);margin-bottom:10px;}
-    .footer-grid a{display:block;color: rgba(224,231,255,.82);font-size:14px;margin: 8px 0;}
-    .footer-grid a:hover{color: var(--ink);}
+    footer{
+      padding:56px 0;
+      background:rgba(2,6,23,.85);
+      border-top:1px solid rgba(30,41,59,.9);
+    }
 
-    .fine{margin-top:24px;padding-top:18px;border-top:1px solid rgba(30,41,59,.9);color: rgba(203,213,225,.72);font-size:13px;text-align:right;}
-
-    /* Responsive */
-    @media (max-width: 980px){
-      .hero-layout{grid-template-columns: 1fr;}
+    @media (max-width:980px){
+      .hero-layout{grid-template-columns:1fr;}
       nav{display:none;}
       h1{font-size:44px;}
-      .grid-3{grid-template-columns: 1fr;}
-      .steps{grid-template-columns: 1fr;}
-      .footer-grid{grid-template-columns: 1fr;}
-      .brand{min-width:auto;}
     }
   </style>
 </head>
 
 <body>
-  <header id="top">
-    <div class="wrap">
-      <div class="header-inner">
-        <a class="brand" href="index.html" aria-label="FutureCount Home">
-          <img
-            src="with%20background.png"
-            alt="FutureCount logo"
-            class="mark"
-            width="34"
-            height="34"
-            loading="eager"
-          />
-          <div class="wordmark">
-            FutureCount
-            <small>Advisory-led enablement</small>
+<header>
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <img src="with%20background.png" class="mark" alt="FutureCount logo">
+      <div class="wordmark">FutureCount<small>Advisory-led enablement</small></div>
+    </a>
+    <nav>
+      <a href="#how">How It Works</a>
+      <a href="#services">Services</a>
+      <a class="nav-cta" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-layout">
+        <div>
+          <h1>Establish and grow your ERP system implementation services</h1>
+          <div class="subtitle">Your clients are moving ahead, is your firm charting the course or following the crowd?</div>
+          <p class="lead">
+            CFOs are adopting API-native finance platforms, automating workflows and leveraging AI.
+            Traditional accounting firms risk losing advisory relevance unless they evolve.
+          </p>
+          <div class="cta-row">
+            <a class="btn primary" href="contact.html">Start a Conversation</a>
+            <a class="btn" href="#how">How It Works</a>
           </div>
-        </a>
+        </div>
 
-        <nav aria-label="Primary">
-          <a href="#how">How It Works</a>
-          <a href="#services">Services</a>
-          <a class="nav-cta" href="contact.html">Contact</a>
-        </nav>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero" aria-label="Hero">
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="wrap hero-inner">
-        <div class="hero-layout">
-          <div>
-            <h1>Establish and grow your ERP system implementation services</h1>
-            <div class="subtitle">Your clients are moving ahead, is your firm charting the course or following the crowd?</div>
-            <p class="lead">
-              CFOs are adopting API-native finance platforms, automating workflows and leveraging AI.
-              Traditional accounting firms risk losing advisory relevance unless they evolve. FutureCount
-              partners with established firms to help you capture this demand, not chase it.
-            </p>
-            <div class="cta-row">
-              <a class="btn primary" href="contact.html">Start a Conversation</a>
-              <a class="btn" href="#how">How It Works</a>
-              <a class="btn" href="#services">Explore Services</a>
-            </div>
-            <div class="micro">Confidential, practical, and designed to preserve client ownership.</div>
+        <aside class="hero-card">
+          <div class="top">
+            <strong>What you gain</strong>
           </div>
-
-          <aside class="hero-card" aria-label="Value snapshot">
-            <div class="top">
-              <strong>What you gain</strong>
-              <span class="pill">Enablement, not disruption</span>
-            </div>
-            <div class="body">
-              <div class="stat">
-                <div class="stat-item">
-                  <b>Advisory edge</b>
-                  <span>Position your firm as the guide for modern finance and operational control.</span>
-                </div>
-                <div class="stat-item">
-                  <b>Implementation capability</b>
-                  <span>Launch platform, integration, and workflow services without building an internal tech bench.</span>
-                </div>
-                <div class="stat-item">
-                  <b>Recurring revenue</b>
-                  <span>Move from episodic projects to ongoing operating support and optimization.</span>
-                </div>
+          <div class="body">
+            <div class="stat">
+              <div class="stat-item">
+                <b>Advisory edge</b>
+                <span>Position your firm as the guide for modern finance and operational control.</span>
+              </div>
+              <div class="stat-item">
+                <b>Implementation capability</b>
+                <span>Launch platform, integration, and workflow services without building an internal tech bench.</span>
+              </div>
+              <div class="stat-item">
+                <b>Recurring revenue</b>
+                <span>Move from episodic projects to ongoing operating support and optimization.</span>
               </div>
             </div>
-          </aside>
-        </div>
+          </div>
+        </aside>
       </div>
-    </section>
-
-    <section
-  id="services"
-  aria-label="Services"
-  style="
-    position: relative;
-    background:
-      radial-gradient(700px 500px at 20% 30%, rgba(96,165,250,.28), rgba(96,165,250,0) 60%),
-      radial-gradient(650px 520px at 70% 35%, rgba(37,99,235,.22), rgba(37,99,235,0) 62%),
-      linear-gradient(120deg, rgba(2,6,23,1), rgba(15,23,42,1));
-    border-top: 1px solid rgba(30,41,59,.9);
-    border-bottom: 1px solid rgba(30,41,59,.9);
-  "
->
-      <div class="wrap">
-        <h2 class="section-title">Services designed for leverage</h2>
-        <p class="section-sub">
-          FutureCount helps you build a modern implementation and enablement line of business that fits your firm’s strengths, preserves client trust, and scales.
-        </p>
-
-        <div class="grid-3">
-          <div class="card">
-            <h3>Readiness Diagnostic</h3>
-            <p>Clarify your market, service scope, delivery model, and quality gates before you commit resources.</p>
-          </div>
-          <div class="card">
-            <h3>Implementation Enablement</h3>
-            <p>Platform selection, integration planning, workflow design, and adoption support, anchored in operational control.</p>
-          </div>
-          <div class="card">
-            <h3>Operate and Optimize</h3>
-            <p>Ongoing monitoring, controls, and continuous improvement, with clear ownership and auditable outcomes.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section
-  id="How it works"
-  aria-label="How it works"
-  style="
-    position: relative;
-    background:
-      radial-gradient(700px 500px at 20% 30%, rgba(96,165,250,.28), rgba(96,165,250,0) 60%),
-      radial-gradient(650px 520px at 70% 35%, rgba(37,99,235,.22), rgba(37,99,235,0) 62%),
-      linear-gradient(120deg, rgba(2,6,23,1), rgba(15,23,42,1));
-    border-top: 1px solid rgba(30,41,59,.9);
-    border-bottom: 1px solid rgba(30,41,59,.9);
-  "
->
-      <div class="wrap">
-        <h2 class="section-title">How it works</h2>
-        <p class="section-sub">
-          FutureCount focuses on enabling your firm to launch a new, channel partnership-led line of business
-        </p>
-
-        <div class="steps">
-          <div class="step">
-            <div class="num">1</div>
-            <h4>Develop a channel partner-led growth strategy</h4>
-            <p>Choose the client segment, the vendor platform ecosystem, and the outcomes that matter. Leverage your strengths and existing market presence</p>
-          </div>
-          <div class="step">
-            <div class="num">2</div>
-            <h4>Design and extend your operating and delivery model</h4>
-            <p>Translate capability into an offer, pricing, workflow, and governance. Build a skilled and trained pool of delivery experts</p>
-          </div>
-          <div class="step">
-            <div class="num">3</div>
-            <h4>Launch with a pilot</h4>
-            <p>Run a controlled engagement, measure results, and refine. Build credibility and client testimonials</p>
-          </div>
-          <div class="step">
-            <div class="num">4</div>
-            <h4>Scale with discipline</h4>
-            <p>Standardize what works, automate what is stable, and preserve human review where trust is earned.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section
-  id="Insights"
-  aria-label="Insights"
-  style="
-    position: relative;
-    background:
-      radial-gradient(700px 500px at 20% 30%, rgba(96,165,250,.28), rgba(96,165,250,0) 60%),
-      radial-gradient(650px 520px at 70% 35%, rgba(37,99,235,.22), rgba(37,99,235,0) 62%),
-      linear-gradient(120deg, rgba(2,6,23,1), rgba(15,23,42,1));
-    border-top: 1px solid rgba(30,41,59,.9);
-    border-bottom: 1px solid rgba(30,41,59,.9);
-  "
->
-      <div class="wrap">
-        <h2 class="section-title">Insights</h2>
-        <p class="section-sub">
-          Lead your clients; stop chasing them.
-        </p>
-
-        <div class="grid-3">
-          <div class="card">
-            <h3>Why CFOs are moving to API-native platforms</h3>
-            <p>Control, automation, and auditability are not optional in the next generation of operating finance.</p>
-          </div>
-          <div class="card">
-            <h3>Implementation is now advisory work</h3>
-            <p>The work is not software. The work is policy, process, and accountable outcomes.</p>
-          </div>
-          <div class="card">
-            <h3>What to standardize and what to keep human</h3>
-            <p>Trust scales when you know where automation belongs and where it does not.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <div class="footer-grid">
-        <div>
-          <b>FutureCount LLC</b>
-          <div style="color: rgba(224,231,255,.82); line-height:1.7; max-width: 68ch;">
-            Partnering with accounting and advisory firms to implement and operate modern finance systems and advisory practices.
-          </div>
-        </div>
-        <div>
-          <b>Explore</b>
-          <a href="#how">How It Works</a>
-          <a href="#services">Services</a>
-          <a href="contact.html">Contact</a>
-        </div>
-      </div>
-      <div class="fine">© 2026 FutureCount LLC. All rights reserved.</div>
     </div>
-  </footer>
+  </section>
+</main>
 
-  <script>
-    (function(){
-      const header = document.querySelector('header');
-      let ticking = false;
+<footer>
+  <div class="wrap">
+    © 2026 FutureCount LLC. All rights reserved.
+  </div>
+</footer>
 
-      function onScroll(){
-        const y = window.scrollY || 0;
-        if(y > 8){header.classList.add('scrolled');}
-        else{header.classList.remove('scrolled');}
-      }
-
-      window.addEventListener('scroll', function(){
-        if(!ticking){
-          window.requestAnimationFrame(function(){
-            onScroll();
-            ticking = false;
-          });
-          ticking = true;
-        }
-      }, {passive:true});
-
-      onScroll();
-    })();
-  </script>
+<script>
+(function(){
+  const h=document.querySelector('header');
+  function s(){window.scrollY>8?h.classList.add('scrolled'):h.classList.remove('scrolled')}
+  window.addEventListener('scroll',s,{passive:true});
+  s();
+})();
+</script>
 </body>
 </html>
