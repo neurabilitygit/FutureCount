@@ -1,603 +1,552 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SPFGC7K7TL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SPFGC7K7TL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SPFGC7K7TL');
+  </script>
 
-  gtag('config', 'G-SPFGC7K7TL');
-</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FutureCount LLC | Advisory-Led Modern Finance Enablement</title>
+  <title>FutureCount Holdings LLC | Operating FutureCount and Rising Senior</title>
   <link rel="canonical" href="https://futurecountllc.com/" />
-  <meta name="description" content="FutureCount partners with accounting and advisory firms to implement and operationalize modern finance platforms like Campfire and Rillet, combining accounting rigor with modern systems execution." />
+  <meta name="description" content="FutureCount Holdings LLC operates FutureCount professional services and Rising Senior, a family-centric SaaS and coaching platform for the college-to-career transition." />
+  <meta property="og:title" content="FutureCount Holdings LLC" />
+  <meta property="og:description" content="The operating company behind FutureCount professional services and Rising Senior." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://futurecountllc.com/" />
+  <meta property="og:image" content="https://futurecountllc.com/assets/logos/rising-senior-logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
     :root{
-      --bg:#0b1020;
-      --panel:#0f172a;
-      --panel2:#020617;
-      --line:#1e293b;
-      --text:#e5e7eb;
-      --muted:#cbd5e1;
-      --muted2:#e0e7ff;
-      --accent:#60a5fa;
-      --accent2:#2563eb;
-      --ink:#f8fafc;
-      --shadow: 0 14px 50px rgba(0,0,0,.35);
-      --radius: 18px;
+      --ink:#102033;
+      --muted:#5f6d7d;
+      --soft:#f6f3ed;
+      --cream:#fffdf8;
+      --line:#e4ded2;
+      --gold:#c59a4a;
+      --navy:#0b2742;
+      --green:#456653;
+      --rs:#df7b3f;
+      --panel:#ffffff;
+      --shadow:0 20px 55px rgba(20,34,52,.10);
     }
 
     *{box-sizing:border-box;margin:0;padding:0;}
-    html,body{height:100%;}
-
+    html{scroll-behavior:smooth;}
     body{
       font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      overflow-x:hidden;
+      background:
+        linear-gradient(90deg, rgba(11,39,66,.04) 1px, transparent 1px),
+        linear-gradient(180deg, var(--cream), var(--soft));
+      background-size:92px 92px, auto;
+      color:var(--ink);
+      line-height:1.55;
     }
-
     a{color:inherit;text-decoration:none;}
-    .wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
+    .wrap{width:min(1120px, calc(100% - 40px));margin:0 auto;}
 
-    /* Header */
     header{
       position:sticky;
       top:0;
-      z-index:50;
-      background: rgba(15,23,42,.82);
-      backdrop-filter: blur(10px);
-      border-bottom:1px solid rgba(30,41,59,.7);
-      transition: box-shadow .25s ease, background .25s ease;
+      z-index:10;
+      background:rgba(255,253,248,.88);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
     }
-
-    header.scrolled{
-      box-shadow: var(--shadow);
-      background: rgba(15,23,42,.92);
-    }
-
     .header-inner{
+      min-height:72px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      height:72px;
+      gap:24px;
     }
-
     .brand{
       display:flex;
       align-items:center;
       gap:12px;
+      min-width:0;
     }
-
-    .mark{
-      width:34px;
-      height:34px;
+    .brand img{
+      width:30px;
+      height:30px;
       object-fit:contain;
+      border-radius:7px;
+      opacity:.76;
     }
-
-    .wordmark{
-      font-family:'Playfair Display',serif;
-      font-weight:700;
-      color: var(--ink);
-      font-size:18px;
-      line-height:1.05;
+    .brand strong{
+      display:block;
+      font-size:15px;
+      letter-spacing:.01em;
+      color:var(--navy);
     }
-
-    .wordmark small{
+    .brand span{
       display:block;
       font-size:12px;
-      opacity:.75;
-      margin-top:2px;
+      color:var(--muted);
+      margin-top:1px;
     }
-
     nav{
       display:flex;
-      gap:20px;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
     }
-
     nav a{
       font-size:13px;
-      font-weight:600;
-      color: var(--muted);
-      padding:10px;
-      border-radius:10px;
+      font-weight:700;
+      color:var(--muted);
+      padding:9px 11px;
+      border-radius:999px;
     }
-
-    nav a:hover{
-      color: var(--ink);
-      background: rgba(96,165,250,.08);
-    }
-
+    nav a:hover{background:#efe8db;color:var(--ink);}
     .nav-cta{
-      border:1px solid rgba(96,165,250,.55);
-      background: rgba(96,165,250,.10);
-      color: var(--ink);
-      padding:10px 14px;
+      border:1px solid rgba(197,154,74,.55);
+      background:#fff7e6;
+      color:var(--navy);
     }
 
-    /* Hero */
+    main{padding-bottom:64px;}
     .hero{
-      position:relative;
-      min-height:92vh;
-      display:flex;
+      padding:88px 0 54px;
+    }
+    .eyebrow{
+      display:inline-flex;
       align-items:center;
-      overflow:hidden;
-      border-bottom:1px solid rgba(30,41,59,.9);
-    }
-
-    .hero::before{
-      content:"";
-      position:absolute;
-      inset:-40%;
-      background:
-        radial-gradient(700px 500px at 20% 30%, rgba(96,165,250,.38), transparent 60%),
-        radial-gradient(650px 520px at 70% 35%, rgba(37,99,235,.30), transparent 62%),
-        linear-gradient(120deg, #020617, #0f172a);
-      animation: drift 14s ease-in-out infinite;
-    }
-
-    @keyframes drift{
-      0%{transform:translate(-1.5%,-1.2%) scale(1.02);}
-      50%{transform:translate(1.5%,1.2%) scale(1.06);}
-      100%{transform:translate(-1.5%,-1.2%) scale(1.02);}
-    }
-
-    .hero-inner{
-      position:relative;
-      z-index:2;
-      width:100%;
-      padding:64px 0 64px;
-    }
-
-    .hero-layout{
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:44px;
-      align-items:center;
-    }
-
-    h1{
-      font-family:'Playfair Display',serif;
-      font-size:48px;
-      color:var(--ink);
-      margin-bottom:14px;
-    }
-
-    .subtitle{
-      font-size:18px;
-      color:var(--muted2);
+      gap:8px;
+      font-size:12px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      color:var(--green);
       margin-bottom:18px;
     }
-
+    .eyebrow::before{
+      content:"";
+      width:34px;
+      height:2px;
+      background:var(--gold);
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 360px;
+      gap:42px;
+      align-items:start;
+    }
+    h1{
+      font-size:clamp(40px, 6vw, 68px);
+      line-height:1.02;
+      letter-spacing:-.03em;
+      color:var(--navy);
+      max-width:920px;
+      margin-bottom:20px;
+    }
     .lead{
-      font-size:18px;
-      line-height:1.7;
-      color:rgba(224,231,255,.92);
+      font-size:20px;
+      color:#48596b;
+      max-width:780px;
       margin-bottom:26px;
     }
-
-    .cta-row{display:flex;gap:14px;}
-
-    .btn{
-      padding:13px 18px;
-      border-radius:14px;
-      border:1px solid rgba(224,231,255,.38);
-      background:rgba(2,6,23,.28);
-      font-weight:700;
-      font-size:14px;
-      color:var(--ink);
-    }
-
-    .btn.primary{
-      background:rgba(37,99,235,.32);
-      border-color:rgba(96,165,250,.62);
-    }
-
-    /* Hero Card */
-    .hero-card{
-      border-radius: var(--radius);
-      border: 2px solid rgba(255,255,255,.35);
-      background: rgba(2,6,23,.35);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .hero-card .top{
-      padding:18px;
-      border-bottom:1px solid rgba(255,255,255,.25);
+    .cta-row{
       display:flex;
-      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
       align-items:center;
-      position:relative;
     }
-
-    .hero-card .top strong{
-      font-size:13px;
-      letter-spacing:.01em;
-      text-align:center;
-      color:var(--ink);
+    .button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:46px;
+      padding:12px 18px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:var(--panel);
+      color:var(--navy);
+      font-weight:800;
+      font-size:14px;
+      box-shadow:0 8px 22px rgba(20,34,52,.07);
     }
-
-    .hero-card .top .pill{
-      position:absolute;
-      right:18px;
+    .button.primary{
+      background:var(--navy);
+      color:white;
+      border-color:var(--navy);
+    }
+    .button.rising{
+      background:var(--rs);
+      color:white;
+      border-color:var(--rs);
+    }
+    .aside-card{
+      background:rgba(255,255,255,.78);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:22px;
+      box-shadow:var(--shadow);
+    }
+    .aside-card h2{
+      font-size:16px;
+      color:var(--navy);
+      margin-bottom:10px;
+    }
+    .aside-card p{
+      color:var(--muted);
+      font-size:14px;
+      margin-bottom:14px;
+    }
+    .fine{
+      color:#738091;
       font-size:12px;
+    }
+
+    .section{
+      padding:42px 0;
+    }
+    .section-heading{
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      gap:24px;
+      margin-bottom:18px;
+    }
+    .section-heading h2{
+      font-size:28px;
+      color:var(--navy);
+      letter-spacing:-.02em;
+    }
+    .section-heading p{
+      color:var(--muted);
+      max-width:560px;
+      font-size:15px;
+    }
+    .business-grid{
+      display:grid;
+      grid-template-columns:1.25fr .75fr;
+      gap:18px;
+    }
+    .business{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:24px;
+      box-shadow:var(--shadow);
+      min-height:280px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:24px;
+    }
+    .business.featured{
+      border-color:rgba(223,123,63,.42);
+      background:linear-gradient(135deg, #ffffff 0%, #fff7ef 100%);
+    }
+    .logo-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      margin-bottom:14px;
+    }
+    .rising-logo{
+      width:min(230px, 70%);
+      height:auto;
+      display:block;
+    }
+    .small-mark{
+      width:42px;
+      height:42px;
+      object-fit:contain;
+      border-radius:10px;
+      opacity:.7;
+    }
+    .tag{
+      display:inline-flex;
+      align-items:center;
       padding:6px 10px;
       border-radius:999px;
-      border:1px solid rgba(96,165,250,.35);
-      background:rgba(96,165,250,.10);
-      color:rgba(224,231,255,.95);
-    }
-
-    .hero-card .body{padding:18px;}
-
-    .stat{
-      display:grid;
-      gap:14px;
-    }
-
-    .stat-item{
-      padding:14px;
-      border-radius: 14px;
-      border: 2px solid rgba(255,255,255,.35);
-      background: rgba(15,23,42,.45);
-    }
-
-    .stat-item b{
-      display:block;
-      margin-bottom:6px;
-      color:var(--ink);
-      font-size:13px;
-    }
-
-    .stat-item span{
-      font-size:13px;
-      line-height:1.55;
-      color:rgba(203,213,225,.92);
-    }
-
-    section{padding:84px 0;}
-
-    /* Added: section headings and layout helpers for restored sections */
-    .section-title{
-      font-family:'Playfair Display',serif;
-      font-size:34px;
-      color: var(--ink);
-      margin-bottom: 14px;
-    }
-
-    .section-sub{
-      color: rgba(203,213,225,.92);
-      font-size:16px;
-      line-height:1.7;
-      max-width: 76ch;
-      margin-bottom: 28px;
-    }
-
-    .grid-3{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .card{
-      border-radius: var(--radius);
-      border: 2px solid rgba(255,255,255,.35);
-      background: rgba(2,6,23,.35);
-      box-shadow: 0 10px 30px rgba(0,0,0,.22);
-      padding: 18px;
-    }
-
-    .card h3{
-      color: var(--ink);
-      font-size:16px;
-      margin-bottom: 8px;
-    }
-
-    .card p{
-      color: rgba(203,213,225,.92);
-      font-size:14px;
-      line-height:1.65;
-    }
-
-    .steps{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .step{
-      border-radius: var(--radius);
-      border: 2px solid rgba(255,255,255,.35);
-      background: rgba(2,6,23,.35);
-      padding: 18px;
-    }
-
-    .step .num{
-      width:28px;
-      height:28px;
-      border-radius: 10px;
-      display:grid;
-      place-items:center;
-      border:1px solid rgba(96,165,250,.4);
-      background: rgba(96,165,250,.12);
-      color: var(--ink);
+      background:#f2eadc;
+      color:var(--green);
+      font-size:12px;
       font-weight:800;
-      margin-bottom: 10px;
-      font-size:13px;
+      white-space:nowrap;
     }
-
-    .step h4{
-      color: var(--ink);
-      font-size:15px;
-      margin-bottom: 7px;
+    .business h3{
+      font-size:24px;
+      color:var(--navy);
+      margin-bottom:10px;
+      letter-spacing:-.02em;
     }
-
-    .step p{
-      color: rgba(203,213,225,.92);
+    .business p{
+      color:#4e5d70;
+      font-size:16px;
+      margin-bottom:16px;
+    }
+    .business ul{
+      list-style:none;
+      display:grid;
+      gap:9px;
+      color:#566477;
       font-size:14px;
-      line-height:1.65;
+      margin-bottom:20px;
+    }
+    .business li{
+      padding-left:18px;
+      position:relative;
+    }
+    .business li::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:.68em;
+      width:7px;
+      height:7px;
+      border-radius:999px;
+      background:var(--gold);
     }
 
-    /* Services section gradient background to match hero style language */
-    #services{
-      position: relative;
-      background:
-        radial-gradient(700px 500px at 20% 30%, rgba(96,165,250,.28), transparent 60%),
-        radial-gradient(650px 520px at 70% 35%, rgba(37,99,235,.22), transparent 62%),
-        linear-gradient(120deg, #020617, #0f172a);
-      border-top:1px solid rgba(30,41,59,.9);
-      border-bottom:1px solid rgba(30,41,59,.9);
+    .about-panel{
+      background:rgba(255,255,255,.76);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:26px;
+      box-shadow:var(--shadow);
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
     }
-
-    #how{
-      background:
-      radial-gradient(700px 500px at 20% 30%, rgba(96,165,250,.28), transparent 60%),
-      radial-gradient(650px 520px at 70% 35%, rgba(37,99,235,.22), transparent 62%),
-      linear-gradient(120deg, #020617, #0f172a);
-      border-top:1px solid rgba(30,41,59,.9);
-      border-bottom:1px solid rgba(30,41,59,.9);
+    .about-panel h2{
+      font-size:27px;
+      color:var(--navy);
+      letter-spacing:-.02em;
+      margin-bottom:12px;
+    }
+    .about-panel p{
+      color:#526173;
+      margin-bottom:12px;
+    }
+    .contact-band{
+      background:var(--navy);
+      color:white;
+      border-radius:22px;
+      padding:30px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      box-shadow:var(--shadow);
+    }
+    .contact-band h2{
+      font-size:26px;
+      letter-spacing:-.02em;
+      margin-bottom:8px;
+    }
+    .contact-band p{
+      color:#d9e3ee;
+      max-width:620px;
+    }
+    .contact-band .button{
+      background:white;
+      color:var(--navy);
+      border-color:white;
+      box-shadow:none;
+      flex:0 0 auto;
     }
 
     footer{
-      padding:56px 0;
-      background:rgba(2,6,23,.85);
-      border-top:1px solid rgba(30,41,59,.9);
+      border-top:1px solid var(--line);
+      background:rgba(255,253,248,.85);
+      padding:28px 0;
+      color:#647287;
+      font-size:13px;
     }
-
     .footer-row{
       display:flex;
       justify-content:space-between;
-      align-items:flex-start;
-      gap:24px;
+      gap:18px;
       flex-wrap:wrap;
     }
-
-    .footer-brand strong{
-      display:block;
-      color: var(--ink);
-      margin-bottom: 6px;
+    .footer-row a{
+      font-weight:700;
+      color:var(--navy);
     }
 
-    .footer-brand span{
-      display:block;
-      opacity:.75;
-      line-height:1.6;
-      max-width: 70ch;
+    @media (max-width:860px){
+      .header-inner{align-items:flex-start;flex-direction:column;padding:14px 0;}
+      nav{justify-content:flex-start;}
+      .hero{padding-top:58px;}
+      .hero-grid,.business-grid,.about-panel{grid-template-columns:1fr;}
+      .business{min-height:auto;}
+      .section-heading,.contact-band{align-items:flex-start;flex-direction:column;}
+      .rising-logo{width:210px;}
     }
-
-    .footer-nav{
-      display:flex;
-      gap:16px;
-      font-size:13px;
-      flex-wrap:wrap;
-    }
-
-    .footer-nav a{
-      color: rgba(224,231,255,.82);
-      padding:8px 10px;
-      border-radius:10px;
-    }
-
-    .footer-nav a:hover{
-      color: var(--ink);
-      background: rgba(96,165,250,.08);
-    }
-
-    .footer-fine{
-      margin-top:24px;
-      padding-top:18px;
-      border-top:1px solid rgba(30,41,59,.9);
-      opacity:.7;
-      font-size:12px;
-      text-align:right;
-    }
-
-   @media (max-width:980px){
-
-  .header-inner{
-    flex-wrap:wrap;
-    height:auto;
-    padding:14px 0;
-  }
-
-  nav{
-    display:flex;
-    width:100%;
-    justify-content:flex-start;
-    margin-top:10px;
-    flex-wrap:wrap;
-    gap:12px;
-  }
-
-  nav a{
-    padding:8px 10px;
-    font-size:13px;
-  }
-
-  .hero-layout{grid-template-columns:1fr;}
-  h1{font-size:40px;}
-  .grid-3{grid-template-columns:1fr;}
-  .steps{grid-template-columns:1fr;}
-  .footer-fine{text-align:left;}
-}
   </style>
 </head>
-
 <body>
-<header>
-  <div class="wrap header-inner">
-    <a class="brand" href="index.html">
-      <img src="with%20background (1).png" class="mark" alt="FutureCount logo">
-      <div class="wordmark">FutureCount<small>Advisory-led enablement</small></div>
-    </a>
-    <nav>
-      <a href="#how">How It Works</a>
-      <a href="#services">Services</a>
-      <a class="nav-cta" href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+  <header>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="FutureCount Holdings LLC home">
+        <img src="with background.png" alt="" />
+        <span>
+          <strong>FutureCount Holdings LLC</strong>
+          <span>Operating company</span>
+        </span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#businesses">Businesses</a>
+        <a href="#about">Founder</a>
+        <a href="https://risingsenior.com">Rising Senior</a>
+        <a class="nav-cta" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<main>
-  <section class="hero">
-    <div class="wrap hero-inner">
-      <div class="hero-layout">
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
         <div>
-          <h1>Establish and grow your ERP system implementation services</h1>
-          <div class="subtitle">Your clients are moving ahead, is your firm charting the course or following the crowd?</div>
+          <div class="eyebrow">Massachusetts LLC</div>
+          <h1>FutureCount Holdings LLC operates focused service and software businesses.</h1>
           <p class="lead">
-            CFOs are adopting API-native finance platforms, automating workflows and leveraging AI.
-            Traditional accounting firms risk losing advisory relevance unless they evolve.
+            FutureCount Holdings LLC is the operating company behind FutureCount professional services and Rising Senior,
+            a family-centric SaaS and coaching platform for the college-to-career transition.
           </p>
           <div class="cta-row">
-            <a class="btn primary" href="contact.html">Start a Conversation</a>
-            <a class="btn" href="#how">How It Works</a>
+            <a class="button rising" href="https://risingsenior.com">Visit Rising Senior</a>
+            <a class="button" href="#businesses">View business lines</a>
+            <a class="button" href="contact.html">Book an introductory call</a>
           </div>
         </div>
 
-        <aside class="hero-card">
-          <div class="top">
-            <strong>What you gain</strong>
-          </div>
-          <div class="body">
-            <div class="stat">
-              <div class="stat-item">
-                <b>Advisory edge</b>
-                <span>Position your firm as the guide for modern finance and operational control.</span>
-              </div>
-              <div class="stat-item">
-                <b>Implementation capability</b>
-                <span>Launch platform, integration, and workflow services without building an internal tech bench.</span>
-              </div>
-              <div class="stat-item">
-                <b>Recurring revenue</b>
-                <span>Move from episodic projects to ongoing operating support and optimization.</span>
-              </div>
-            </div>
-          </div>
+        <aside class="aside-card" aria-label="Company note">
+          <h2>One operating company. Two clear lines of business.</h2>
+          <p>
+            FutureCount Holdings LLC owns and operates Rising Senior while continuing to support selected professional-services work through FutureCount.
+          </p>
+          <p class="fine">
+            Rising Senior is a product and service operated by FutureCount Holdings LLC.
+          </p>
         </aside>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Restored: How It Works -->
-  <section id="how" aria-label="How It Works">
-    <div class="wrap">
-      <h2 class="section-title">How It Works</h2>
-      <p class="section-sub">
-        FutureCount focuses on enabling your firm to launch a new, channel partnership-led line of business.
-        The objective is to build implementation capability with discipline, clear quality gates, and durable client trust.
-      </p>
+    <section class="section" id="businesses">
+      <div class="wrap">
+        <div class="section-heading">
+          <h2>Operating lines</h2>
+          <p>
+            FutureCount Holdings LLC keeps the company structure simple. Rising Senior is the active product venture.
+            FutureCount professional services remains distinct and more selective.
+          </p>
+        </div>
 
-      <div class="steps">
-        <div class="step">
-          <div class="num">1</div>
-          <h4>Define the target and the outcomes</h4>
-          <p>Choose the client segment, the vendor ecosystem, and the operational results that matter, then set measurable goals.</p>
-        </div>
-        <div class="step">
-          <div class="num">2</div>
-          <h4>Design the delivery model</h4>
-          <p>Translate capability into an offer, pricing, workflow, governance, and quality controls that your partners can trust.</p>
-        </div>
-        <div class="step">
-          <div class="num">3</div>
-          <h4>Launch with a controlled pilot</h4>
-          <p>Run an initial engagement, measure results, refine the playbook, and build credibility through outcomes.</p>
-        </div>
-        <div class="step">
-          <div class="num">4</div>
-          <h4>Scale with standards</h4>
-          <p>Standardize what is stable, automate what is repeatable, and keep human review where accountability is earned.</p>
+        <div class="business-grid">
+          <article class="business featured">
+            <div>
+              <div class="logo-row">
+                <img class="rising-logo" src="assets/logos/rising-senior-logo.png" alt="Rising Senior" />
+                <span class="tag">Featured venture</span>
+              </div>
+              <h3>Rising Senior</h3>
+              <p>
+                A family-centric SaaS and coaching platform helping college students, parents, and coaches turn college activity
+                into a clearer path toward employability, independence, and life after graduation.
+              </p>
+              <ul>
+                <li>Student progress, academic records, important dates, and career goals in one place</li>
+                <li>Coach-in-the-loop guidance that helps families understand what is changing over time</li>
+                <li>Family Compass support for clearer parent-student communication</li>
+              </ul>
+            </div>
+            <div class="cta-row">
+              <a class="button rising" href="https://risingsenior.com">Visit Rising Senior</a>
+              <a class="button" href="https://risingsenior.com/#pilot">Join the pilot waitlist</a>
+            </div>
+          </article>
+
+          <article class="business">
+            <div>
+              <div class="logo-row">
+                <img class="small-mark" src="with background.png" alt="" />
+                <span class="tag">Professional services</span>
+              </div>
+              <h3>FutureCount</h3>
+              <p>
+                Advisory work for technology-driven growth, partner ecosystems, operating models, and professional-services strategy.
+              </p>
+              <ul>
+                <li>Partner ecosystem design and activation</li>
+                <li>Technology and services growth strategy</li>
+                <li>Executive-level operating support for selected engagements</li>
+              </ul>
+            </div>
+            <a class="button" href="contact.html">Discuss advisory work</a>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Restored: Services -->
-  <section id="services" aria-label="Services">
-    <div class="wrap">
-      <h2 class="section-title">Services designed for leverage</h2>
-      <p class="section-sub">
-        FutureCount helps you build a modern implementation and enablement line of business that fits your firm’s strengths,
-        preserves client ownership, and scales with integrity.
-      </p>
-
-      <div class="grid-3">
-        <div class="card">
-          <h3>Readiness Diagnostic</h3>
-          <p>Clarify market focus, service scope, delivery model, and quality gates before committing serious resources.</p>
-        </div>
-        <div class="card">
-          <h3>Implementation Enablement</h3>
-          <p>Platform selection, integration planning, workflow design, and adoption support anchored in operational control.</p>
-        </div>
-        <div class="card">
-          <h3>Operate and Optimize</h3>
-          <p>Ongoing monitoring, controls, and continuous improvement with clear ownership and auditable outcomes.</p>
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="about-panel">
+          <div>
+            <h2>Founder-led operating work</h2>
+            <p>
+              FutureCount Holdings LLC is owned by Eric Bass and reflects work across technology, consulting,
+              financial services, product strategy, and professional-services growth.
+            </p>
+            <p>
+              Rising Senior extends that operating experience into a new family and education context:
+              helping households, students, and coaches make the college-to-career transition clearer and more manageable.
+            </p>
+          </div>
+          <div>
+            <h2>Why this structure</h2>
+            <p>
+              The holding-company structure keeps the legal and ownership picture clear while allowing each business line to keep its own audience,
+              brand, and purpose.
+            </p>
+            <p>
+              FutureCount Holdings LLC is the operating company. Rising Senior is the active product venture. FutureCount professional services remains available for selected advisory work.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
 
-<footer>
-  <div class="wrap">
-    <div class="footer-row">
-      <div class="footer-brand">
-        <strong>FutureCount LLC</strong>
-        <span>Partnering with accounting and advisory firms to implement and operate modern finance systems and advisory practices.</span>
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="contact-band">
+          <div>
+            <h2>Start with the right conversation.</h2>
+            <p>
+              For Rising Senior, visit the product site. For FutureCount advisory or company-level questions,
+              book a short introductory conversation with Eric.
+            </p>
+          </div>
+          <a class="button" href="https://app.simplymeet.me/futurecountllc">Book a 30-minute introductory call</a>
+        </div>
       </div>
-      <nav class="footer-nav" aria-label="Footer">
-        <a href="#how">How It Works</a>
-        <a href="#services">Services</a>
-        <a href="faq.html">FAQ</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>© 2026 FutureCount Holdings LLC. All rights reserved.</span>
+      <span>
+        <a href="https://risingsenior.com">Rising Senior</a>
+        ·
         <a href="contact.html">Contact</a>
-     </nav>
+      </span>
     </div>
-
-    <div class="footer-fine">
-      © 2026 FutureCount LLC. All rights reserved.
-    </div>
-  </div>
-</footer>
-
-<script>
-(function(){
-  const h=document.querySelector('header');
-  function s(){window.scrollY>8?h.classList.add('scrolled'):h.classList.remove('scrolled')}
-  window.addEventListener('scroll',s,{passive:true});
-  s();
-})();
-</script>
+  </footer>
 </body>
 </html>

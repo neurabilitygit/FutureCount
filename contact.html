@@ -12,436 +12,227 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | FutureCount LLC</title>
+  <title>Contact | FutureCount Holdings LLC</title>
   <link rel="canonical" href="https://futurecountllc.com/contact.html" />
-  <meta name="description" content="Contact FutureCount to discuss accounting-led implementations of modern finance platforms, get answers, or schedule a consultation with our expert team." />
+  <meta name="description" content="Contact FutureCount Holdings LLC or book a 30-minute introductory call with Eric Bass." />
+  <meta property="og:title" content="Contact FutureCount Holdings LLC" />
+  <meta property="og:description" content="Book an introductory call or visit Rising Senior." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://futurecountllc.com/contact.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
     :root{
-      --bg:#0b1020;
-      --panel:#0f172a;
-      --panel2:#020617;
-      --line:#1e293b;
-      --text:#e5e7eb;
-      --muted:#cbd5e1;
-      --muted2:#e0e7ff;
-      --accent:#60a5fa;
-      --accent2:#2563eb;
-      --ink:#f8fafc;
-      --shadow: 0 14px 50px rgba(0,0,0,.35);
-      --radius: 18px;
+      --ink:#102033;
+      --muted:#5f6d7d;
+      --soft:#f6f3ed;
+      --cream:#fffdf8;
+      --line:#e4ded2;
+      --gold:#c59a4a;
+      --navy:#0b2742;
+      --green:#456653;
+      --rs:#df7b3f;
+      --panel:#ffffff;
+      --shadow:0 20px 55px rgba(20,34,52,.10);
     }
-
     *{box-sizing:border-box;margin:0;padding:0;}
-    html,body{height:100%;}
-
     body{
       font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      background:
+        linear-gradient(90deg, rgba(11,39,66,.04) 1px, transparent 1px),
+        linear-gradient(180deg, var(--cream), var(--soft));
+      background-size:92px 92px, auto;
+      color:var(--ink);
+      line-height:1.55;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
     }
-
     a{color:inherit;text-decoration:none;}
-    .wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
-
-    /* Header */
+    .wrap{width:min(980px, calc(100% - 40px));margin:0 auto;}
     header{
-      position:sticky;
-      top:0;
-      z-index:50;
-      background: rgba(15,23,42,.82);
-      backdrop-filter: blur(10px);
-      border-bottom:1px solid rgba(30,41,59,.7);
-      transition: box-shadow .25s ease, background .25s ease;
+      background:rgba(255,253,248,.88);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
     }
-
-    header.scrolled{
-      box-shadow: var(--shadow);
-      background: rgba(15,23,42,.92);
-    }
-
     .header-inner{
+      min-height:72px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      height:72px;
+      gap:24px;
     }
-
     .brand{
       display:flex;
       align-items:center;
       gap:12px;
-      min-width:220px;
     }
-
-    .mark{
-      width:34px;
-      height:34px;
-      display:block;
+    .brand img{
+      width:30px;
+      height:30px;
       object-fit:contain;
+      border-radius:7px;
+      opacity:.76;
     }
-
-    .wordmark{
-      font-family:'Playfair Display',serif;
-      font-weight:700;
-      letter-spacing:.02em;
-      color: var(--ink);
-      font-size:18px;
-      line-height:1.05;
-    }
-
-    .wordmark small{
-      display:block;
-      font-family:'Inter',sans-serif;
-      font-weight:500;
-      opacity:.75;
-      letter-spacing:.01em;
-      font-size:12px;
-      margin-top:2px;
-    }
-
-    nav{
-      display:flex;
-      align-items:center;
-      gap:20px;
-    }
-
+    .brand strong{font-size:15px;color:var(--navy);}
+    nav{display:flex;gap:10px;flex-wrap:wrap;}
     nav a{
       font-size:13px;
-      font-weight:600;
-      color: var(--muted);
-      padding:10px 10px;
-      border-radius:10px;
-      white-space:nowrap;
-      transition: color .2s ease, background .2s ease;
+      font-weight:800;
+      color:var(--muted);
+      padding:9px 11px;
+      border-radius:999px;
     }
-
-    nav a:hover{
-      color: var(--ink);
-      background: rgba(96,165,250,.08);
+    nav a:hover{background:#efe8db;color:var(--ink);}
+    main{flex:1;padding:74px 0;}
+    .panel{
+      background:rgba(255,255,255,.82);
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:34px;
+      box-shadow:var(--shadow);
     }
-
-    .nav-cta{
-      margin-left:6px;
-      padding:10px 14px;
-      border:1px solid rgba(96,165,250,.55);
-      background: rgba(96,165,250,.10);
-      color: var(--ink);
+    .eyebrow{
+      color:var(--green);
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      margin-bottom:14px;
     }
-
-    .nav-cta:hover{
-      background: rgba(96,165,250,.18);
+    h1{
+      font-size:clamp(38px, 6vw, 58px);
+      line-height:1.05;
+      color:var(--navy);
+      letter-spacing:-.03em;
+      margin-bottom:18px;
     }
-
-    /* Contact content */
-    .contact{
-      padding: 96px 0;
-      background:
-        radial-gradient(700px 500px at 20% 30%, rgba(96,165,250,.28), rgba(96,165,250,0) 60%),
-        radial-gradient(650px 520px at 70% 35%, rgba(37,99,235,.22), rgba(37,99,235,0) 62%),
-        linear-gradient(120deg, rgba(2,6,23,1), rgba(15,23,42,1));
-      border-top:1px solid rgba(30,41,59,.9);
-      border-bottom:1px solid rgba(30,41,59,.9);
+    .lead{
+      color:#4f5f72;
+      font-size:19px;
+      max-width:720px;
+      margin-bottom:26px;
     }
-
-    .contact h1{
-      font-family:'Playfair Display',serif;
-      font-size:40px;
-      color: var(--ink);
-      margin-bottom:20px;
+    .cta-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      margin-top:24px;
     }
-
-    .contact p{
-      font-size:18px;
-      line-height:1.7;
-      color: var(--muted);
-      max-width:760px;
-      margin-bottom:28px;
+    .card{
+      background:white;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:20px;
     }
-
-    .contact-cta{
-      display:inline-block;
-      font-weight:700;
-      font-size:15px;
-      padding:14px 32px;
-      border-radius:14px;
-      border:1px solid rgba(96,165,250,.55);
-      background: rgba(2,6,23,.28);
-      color: var(--ink);
-      cursor:pointer;
+    .card img{
+      width:150px;
+      height:auto;
+      margin-bottom:12px;
     }
-
-    .contact-cta:hover{
-      background: rgba(96,165,250,.14);
+    .card h2{
+      color:var(--navy);
+      font-size:19px;
+      margin-bottom:8px;
     }
-
-    .contact-note{
-      margin-top:18px;
+    .card p{
+      color:var(--muted);
       font-size:14px;
-      color: rgba(203,213,225,.75);
+      margin-bottom:16px;
     }
-
-    /* Modal */
-    .modal{
-      position:fixed;
-      inset:0;
-      background:rgba(2,6,23,.85);
-      display:none;
+    .button{
+      display:inline-flex;
       align-items:center;
       justify-content:center;
-      z-index:100;
-    }
-
-    .modal.active{
-      display:flex;
-    }
-
-    .modal-card{
-      width:min(900px,92vw);
-      height:80vh;
+      min-height:44px;
+      padding:11px 16px;
+      border-radius:12px;
+      border:1px solid var(--line);
       background:var(--panel);
-      border-radius:18px;
-      box-shadow:var(--shadow);
-      display:flex;
-      flex-direction:column;
-      overflow:hidden;
-    }
-
-    .modal-header{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:14px 18px;
-      border-bottom:1px solid rgba(30,41,59,.9);
-    }
-
-    .modal-header b{
+      color:var(--navy);
+      font-weight:800;
       font-size:14px;
-      color:var(--ink);
     }
-
-    .modal-close{
-      font-size:14px;
-      cursor:pointer;
-      opacity:.8;
-    }
-
-    .modal-close:hover{opacity:1;}
-
-    .modal iframe{
-      flex:1;
-      width:100%;
-      border:0;
-    }
-
-    /* Footer (canonical, matches contact.html) */
-    footer{
-      padding:56px 0;
-      background: rgba(2,6,23,.85);
-      border-top:1px solid rgba(30,41,59,.9);
-    }
-
-    .footer-grid{
-      display:grid;
-      grid-template-columns:1.2fr .8fr;
-      gap:24px;
-    }
-
-    .footer-grid b{
-      display:block;
-      color: var(--ink);
-      margin-bottom:10px;
-    }
-
-    .footer-grid a{
-      display:block;
-      color: rgba(224,231,255,.82);
-      font-size:14px;
-      margin:8px 0;
-    }
-
-    .footer-grid a:hover{color:var(--ink);}
-
-    .fine{
-      margin-top:24px;
-      padding-top:18px;
-      border-top:1px solid rgba(30,41,59,.9);
-      color: rgba(203,213,225,.72);
+    .button.primary{background:var(--navy);color:white;border-color:var(--navy);}
+    .button.rising{background:var(--rs);color:white;border-color:var(--rs);}
+    .note{
+      margin-top:22px;
+      color:#738091;
       font-size:13px;
-      text-align:right;
     }
-
-    @media (max-width: 980px){
-  .header-inner{
-    flex-wrap:wrap;
-    height:auto;
-    padding:14px 0;
-  }
-
-  nav{
-    width:100%;
-    display:flex;
-    justify-content:flex-start;
-    margin-top:10px;
-  }
-
-  nav a{
-    padding:8px 10px;
-    font-size:13px;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr;
-  }
-}
+    footer{
+      border-top:1px solid var(--line);
+      padding:24px 0;
+      color:#647287;
+      font-size:13px;
+    }
+    .footer-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;}
+    .footer-row a{font-weight:800;color:var(--navy);}
+    @media (max-width:760px){
+      .header-inner{align-items:flex-start;flex-direction:column;padding:14px 0;}
+      .panel{padding:24px;}
+      .cta-grid{grid-template-columns:1fr;}
+    }
   </style>
 </head>
-
 <body>
-  <header id="top">
-    <div class="wrap">
-      <div class="header-inner">
-        <a class="brand" href="index.html" aria-label="FutureCount Home">
-          <img
-            src="with%20background (1).png"
-            alt="FutureCount logo"
-            class="mark"
-            width="34"
-            height="34"
-            loading="eager"
-          />
-          <div class="wordmark">
-            FutureCount
-            <small>Advisory-led enablement</small>
-          </div>
-        </a>
-
-        <nav aria-label="Primary">
-          <a href="index.html#how">How It Works</a>
-          <a href="index.html#services">Services</a>
-          <a class="nav-cta" href="contact.html">Contact</a>
-        </nav>
-      </div>
+  <header>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <img src="with background.png" alt="" />
+        <strong>FutureCount Holdings LLC</strong>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="index.html#businesses">Businesses</a>
+        <a href="https://risingsenior.com">Rising Senior</a>
+        <a href="index.html">Home</a>
+      </nav>
     </div>
   </header>
 
   <main>
-    <section class="contact" id="contact-hero">
-      <div class="wrap">
-        <h1>Contact</h1>
-        <p>
-          FutureCount works with a limited number of accounting and advisory firms.
-          An introductory conversation is the appropriate next step.
+    <div class="wrap">
+      <section class="panel">
+        <div class="eyebrow">Contact</div>
+        <h1>Start with the right conversation.</h1>
+        <p class="lead">
+          For Rising Senior, visit the product site. For FutureCount advisory work or company-level questions,
+          book a short introductory conversation with Eric.
         </p>
 
-        <button class="contact-cta" id="openScheduler">
-          Schedule an introductory conversation
-        </button>
+        <div class="cta-grid">
+          <article class="card">
+            <img src="assets/logos/rising-senior-logo.png" alt="Rising Senior" />
+            <h2>Rising Senior</h2>
+            <p>
+              Learn about the family-centric SaaS and coaching platform for the college-to-career transition.
+            </p>
+            <a class="button rising" href="https://risingsenior.com">Visit Rising Senior</a>
+          </article>
 
-        <div class="contact-note">
-          Conversations are exploratory and confidential.
-          No preparation or materials are required.
+          <article class="card">
+            <h2>FutureCount Holdings LLC</h2>
+            <p>
+              Book a 30-minute introductory call for advisory work, company-level questions, or business-line inquiries.
+            </p>
+            <a class="button primary" href="https://app.simplymeet.me/futurecountllc">Book a 30-minute introductory call</a>
+          </article>
         </div>
-      </div>
-    </section>
+
+        <p class="note">
+          Rising Senior is a product and service operated by FutureCount Holdings LLC.
+        </p>
+      </section>
+    </div>
   </main>
 
-  <!-- Modal -->
-  <div class="modal" id="schedulerModal" aria-hidden="true">
-    <div class="modal-card" role="dialog" aria-modal="true" aria-label="Schedule a conversation">
-      <div class="modal-header">
-        <b>Schedule a conversation</b>
-        <span class="modal-close" id="closeScheduler" role="button" tabindex="0">Close</span>
-      </div>
-      <iframe
-        src="https://app.simplymeet.me/futurecountllc?is_widget=1&view="
-        scrolling="yes"
-        title="SimplyMeet.me Scheduler">
-      </iframe>
-    </div>
-  </div>
-
-  <!-- Footer (exactly matches contact.html) -->
   <footer>
-    <div class="wrap">
-      <div class="footer-grid">
-        <div>
-          <b>FutureCount LLC</b>
-          <div style="color: rgba(224,231,255,.82); line-height:1.7; max-width:68ch;">
-            Partnering with accounting and advisory firms to implement and operate modern finance systems and advisory practices.
-          </div>
-        </div>
-        <div>
-          <b>Explore</b>
-          <a href="index.html#how">How It Works</a>
-          <a href="index.html#services">Services</a>
-          <a href="faq.html">FAQ</a>
-          <a href="contact.html">Contact</a>
-        </div>
-      </div>
-      <div class="fine">© 2026 FutureCount LLC. All rights reserved.</div>
+    <div class="wrap footer-row">
+      <span>© 2026 FutureCount Holdings LLC. All rights reserved.</span>
+      <span><a href="index.html">Home</a> · <a href="https://risingsenior.com">Rising Senior</a></span>
     </div>
   </footer>
-
-  <script>
-(function(){
-  const modal = document.getElementById('schedulerModal');
-  const hero = document.getElementById('contact-hero');
-
-  function openModal(e){
-    if(e) e.preventDefault();
-    if(!modal) return;
-    modal.classList.add('active');
-    // Fallback in case CSS fails to load for any reason
-    modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeModal(e){
-    if(e) e.preventDefault();
-    if(!modal) return;
-    modal.classList.remove('active');
-    modal.style.display = '';
-    document.body.style.overflow = '';
-    if(hero && hero.scrollIntoView){
-      hero.scrollIntoView({behavior:'smooth'});
-    }
-  }
-
-  // Event delegation: survives markup tweaks and avoids null refs.
-  document.addEventListener('click', function(e){
-    const openTarget = e.target.closest('#openScheduler');
-    if(openTarget){ openModal(e); return; }
-
-    const closeTarget = e.target.closest('#closeScheduler');
-    if(closeTarget){ closeModal(e); return; }
-
-    // Click backdrop to close
-    if(modal && e.target === modal){ closeModal(e); }
-  });
-
-  // ESC to close
-  document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape' && modal && modal.classList.contains('active')){
-      closeModal(e);
-    }
-  });
-})();
-</script>
-
-  <script>
-    (function(){
-      const header = document.querySelector('header');
-      function onScroll(){
-        if(window.scrollY > 8){header.classList.add('scrolled');}
-        else{header.classList.remove('scrolled');}
-      }
-      window.addEventListener('scroll', onScroll, {passive:true});
-      onScroll();
-    })();
-  </script>
 </body>
 </html>
